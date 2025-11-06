@@ -5,7 +5,7 @@
 ## Table of Contents
 - [Overview](#Overview)
 - [Methodology](#Methodology)
-- [Acknodwlegement](#Acknodwlegement)
+- [Dataset](#Dataset)
 
 
 ## Overview
@@ -20,28 +20,34 @@ Dataset Shape (Rows, Columns): 100_000, 33 =  3_300_000
 
 Categorical Fields/Qualitative – 15 Total -Non-numerical attributes or ranked tiers; describe what the computer is. Device Attributes 
 
-    device_type, brand, model, os, form_factor,
-    cpu_brand, cpu_model, cpu_tier,
-    gpu_brand, gpu_model, gpu_tier,
+    Device Identify: device_type, brand, model, os, form_factor
+    CPU: cpu_brand, cpu_model, cpu_tier,
+    GPU: gpu_brand, gpu_model, gpu_tier,
     storage_type, display_type,
-    wifi, bluetooth
+    Connectivity: wifi, bluetooth
 
 
 Quantitative - 18 Total -Numeric measurements; describe how much/powerful/expensive the computer is. To sum it up, quantitative fields hold the Technical Benchmark/Performance data.
 
-    release_year,
-    cpu_cores, cpu_threads, cpu_base_ghz, cpu_boost_ghz,
-    vram_gb, ram_gb, storage_gb, storage_drive_count,
-    display_size_in, resolution, refresh_hz,
-    battery_wh, charger_watts, psu_watts,
-    warranty_months, weight_kg, price
+    Details (Retail info): release_year, weight_kg, price, warranty_months,
+    CPU Specs: cpu_cores, cpu_threads, cpu_base_ghz, cpu_boost_ghz,
+    Storage: vram_gb, ram_gb, storage_gb, storage_drive_count,
+    Laptop Display: display_size_in, resolution, refresh_hz,
+    PSU & Charger/PSU: battery_wh, charger_watts, psu_watts
 
 
 ## Methodology 
 
 ### Exploratory Data Analysis (EDA) 
+
 - Describe().T ​
+
+![DF Describe](images/describe_T.png)
+
+(Break)
+
 - Boolean Filtering 
+
 
 ### Pandas Aggregate
 - mean -> Average Pricing
@@ -52,45 +58,61 @@ Quantitative - 18 Total -Numeric measurements; describe how much/powerful/expens
 ### Data Visualization 
 
 - Double/Multi Bar Plot
+
 ![Avg Price for Brand](images/brand_prices.png)
+
 (BreaK)
 
 ![Form Factor Distribution](images/form_factor_dist_brand.png)
+
 (BreaK)
 
 
 - Stacked Bar Plot
+
 ![Top 4 Brand in DF](images/breakdown_four_brands.png)
+
 (Break)
 
 
 - Line Plot
+
 ![Overall Avg Price](images/avg_brand_timeline.png)
+
 (Break)
 
 ![Brand to Avg Price](images/avg_brand_timeline.png)
+
 (Break)
 
 - Heatmap
+
 ![Zoomed In](images/zoomed_in_heatmap.png)
+
 (break)
 
 ![Feature Heatmap](images/feature_heatmap.png)
+
 (break)
 
 - Stacked Scatterplots 
+
 ![CPU&GPU Tier to Price](images/cpu_gpu_tier_scatterplot.png)
+
 (break)
 
 ![RAM and CPU](images/ram_cpu_threads_scatterplot.png)
+
 (break)
 
 
 ![Cpu Threads and Core](images/cpu_threads_cores_scatterplot.png)
+
 (break)
 
 ## Acknodwlegement
 
 I want to give credit to paperxd since I have used his dataset for my analaysis and already
-cleaned up and organized as well. Provided below is the Kaggle Dataset used for this project:
-https://www.kaggle.com/datasets/paperxd/all-computer-prices/data​
+cleaned up and organized as well. 
+Provided below is the Kaggle Dataset used for this project:
+    https://www.kaggle.com/datasets/paperxd/all-computer-prices/data​
